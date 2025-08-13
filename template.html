@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>{{hero_headline}}</title>
+  <meta name="description" content="{{hero_lead}}">
+  <link rel="stylesheet" href="assets/css/styles.css">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
+</head>
+<body>
+  <header class="nav">
+    <div class="container nav__inner">
+      <a href="#top" class="brand">poola & bloom</a>
+      <nav class="menu">
+        <a href="#about">O nas</a>
+        <a href="#why">Dlaczego my</a>
+        <a href="#reviews">Opinie</a>
+        <a href="#ingredients">Składniki</a>
+        <a href="#products">Produkty</a>
+        <a href="#contact" class="cta">Kontakt</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="top">
+    <!-- HERO -->
+    <section class="section hero">
+      <div class="container hero__grid">
+        <div class="hero__copy">
+          <h1>{{hero_headline}}</h1>
+          <p class="lead">{{hero_lead}}</p>
+          <div class="badges">
+            <div class="badge">
+              <span class="badge__value">&gt;500+</span>
+              <span class="badge__label">reviews</span>
+            </div>
+<div class="badge badge--rating" style="--percent: {{rating_percent}}">
+  <div class="value-with-stars">
+    <span class="stars"></span>
+    <span class="rating-value">{{rating_value}}</span>
+  </div>
+  <span class="badge__label">rating</span>
+</div>
+
+            <div class="badge">
+              <span class="badge__value">Top 100</span>
+              <span class="badge__label">soaps EU</span>
+            </div>
+          </div>
+          <div class="cta-row">
+            <a class="btn btn--primary" href="#products">Zobacz produkty</a>
+            <a class="btn btn--ghost" href="#contact">Skontaktuj się</a>
+          </div>
+        </div>
+        <div class="hero__image">
+          <img src="{{hero_image_url}}" alt="poola & bloom soaps" decoding="async" fetchpriority="high">
+        </div>
+      </div>
+    </section>
+
+    <!-- ABOUT -->
+    <section id="about" class="section">
+      <div class="container cols-2">
+        <div>
+          <h2>From the Heart of Wild Europe</h2>
+          <p>{{about_text}}</p>
+        </div>
+        <div>
+          <img src="{{about_image_url}}" alt="Carpathian Foothills nature" loading="lazy" decoding="async">
+        </div>
+      </div>
+    </section>
+
+    <!-- WHY -->
+    <section id="why" class="section section--alt">
+      <div class="container">
+        <h2>Dlaczego wybrać nasze mydła</h2>
+        <div class="cards cards--2">
+          <div class="card">
+            <h3>Factory-made soaps</h3>
+            <ul>
+              <li>Often contain harsh chemicals like SLES and SLS</li>
+              <li>Can strip skin of natural oils</li>
+              <li>Dryness and irritation</li>
+            </ul>
+          </div>
+          <div class="card card--accent">
+            <h3>Our natural soaps</h3>
+            <ul>
+              <li>Made with nourishing oils: shea butter, olive oil, coconut oil</li>
+              <li>Free from synthetic additives</li>
+              <li>Traditional cold-process methods</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="highlights">
+          <div class="highlight">
+            <img src="assets/images/icon-eco.svg" alt="">
+            <h4>Natural ingredients</h4>
+            <p>Shea Butter, Olive Oil, Coconut Oil, Jojoba Oil and more.</p>
+          </div>
+          <div class="highlight">
+            <img src="assets/images/icon-skin.svg" alt="">
+            <h4>Skin benefits</h4>
+            <p>Deeply moisturizes, soothes sensitive skin, supports renewal.</p>
+          </div>
+          <div class="highlight">
+            <img src="assets/images/icon-earth.svg" alt="">
+            <h4>Eco & ethical</h4>
+            <p>Handcrafted in EU, eco packaging, cruelty free.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- REVIEWS -->
+    <section id="reviews" class="section">
+      <div class="container">
+        <h2>Co mówią klienci</h2>
+        <div class="cards cards--3">
+          {{reviews}}
+        </div>
+      </div>
+    </section>
+
+    <!-- INGREDIENTS -->
+    <section id="ingredients" class="section section--alt">
+      <div class="container">
+        <h2>Siła naturalnych składników</h2>
+        <div class="ingredients-grid">
+          {{ingredients}}
+        </div>
+      </div>
+    </section>
+
+    <!-- PRODUCTS -->
+    <section id="products" class="section">
+      <div class="container">
+        <h2>Produkty</h2>
+        <div class="cards cards--3 products">
+          {{products}}
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact" class="section section--alt">
+      <div class="container cols-2">
+        <div>
+          <h2>Kontakt</h2>
+          <p>Dołącz do nas w promocji naturalnych rozwiązań do pielęgnacji skóry i rozszerz swoją ofertę o nasze zestawy mydeł i peelingi.</p>
+          <ul class="contact">
+            <li><strong>Email:</strong> <a href="mailto:{{contact_email}}">{{contact_email}}</a></li>
+            <li><strong>WWW:</strong> <a href="{{contact_www}}" target="_blank" rel="noopener">{{contact_www}}</a></li>
+          </ul>
+        </div>
+        <div>
+          <form class="form" action="https://formspree.io/f/your-id" method="POST">
+            <label>
+              <span>Your email</span>
+              <input type="email" name="email" required placeholder="you@example.com">
+            </label>
+            <label>
+              <span>Message</span>
+              <textarea name="message" rows="4" placeholder="Hello! I'd like to know more about poola & bloom."></textarea>
+            </label>
+            <button class="btn btn--primary" type="submit">Wyślij</button>
+            <p class="form__note">Submitting sends your message to our inbox.</p>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <p>© {{year}} poola & bloom - handcrafted natural soaps</p>
+    </div>
+  </footer>
+</body>
+</html>
