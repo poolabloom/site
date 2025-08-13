@@ -14,12 +14,12 @@
     <div class="container nav__inner">
       <a href="#top" class="brand">poola & bloom</a>
       <nav class="menu">
-        <a href="#about">About</a>
-        <a href="#why">Why us</a>
-        <a href="#reviews">Reviews</a>
-        <a href="#ingredients">Ingredients</a>
-        <a href="#products">Products</a>
-        <a href="#contact" class="cta">Contact</a>
+        <a href="#about">O nas</a>
+        <a href="#why">Dlaczego my</a>
+        <a href="#reviews">Opinie</a>
+        <a href="#ingredients">Składniki</a>
+        <a href="#products">Produkty</a>
+        <a href="#contact" class="cta">Kontakt</a>
       </nav>
     </div>
   </header>
@@ -36,21 +36,22 @@
               <span class="badge__value">&gt;500+</span>
               <span class="badge__label">reviews</span>
             </div>
-            <div class="badge badge--rating" style="--percent: {{rating_percent}}">
-              <div class="value-with-stars">
-                <span class="stars"></span>
-                <span class="rating-value">{{rating_value}}</span>
-              </div>
-              <span class="badge__label">rating</span>
-            </div>
+<div class="badge badge--rating" style="--percent: {{rating_percent}}">
+  <div class="value-with-stars">
+    <span class="stars"></span>
+    <span class="rating-value">{{rating_value}}</span>
+  </div>
+  <span class="badge__label">rating</span>
+</div>
+
             <div class="badge">
               <span class="badge__value">Top 100</span>
               <span class="badge__label">soaps EU</span>
             </div>
           </div>
           <div class="cta-row">
-            <a class="btn btn--primary" href="#products">See products</a>
-            <a class="btn btn--ghost" href="#contact">Get in touch</a>
+            <a class="btn btn--primary" href="#products">Zobacz produkty</a>
+            <a class="btn btn--ghost" href="#contact">Skontaktuj się</a>
           </div>
         </div>
         <div class="hero__image">
@@ -75,7 +76,7 @@
     <!-- WHY -->
     <section id="why" class="section section--alt">
       <div class="container">
-        <h2>Why choose our soaps</h2>
+        <h2>Dlaczego wybrać nasze mydła</h2>
         <div class="cards cards--2">
           <div class="card">
             <h3>Factory-made soaps</h3>
@@ -118,7 +119,7 @@
     <!-- REVIEWS -->
     <section id="reviews" class="section">
       <div class="container">
-        <h2>What our customers say</h2>
+        <h2>Co mówią klienci</h2>
         <div class="cards cards--3">
           {{reviews}}
         </div>
@@ -128,7 +129,7 @@
     <!-- INGREDIENTS -->
     <section id="ingredients" class="section section--alt">
       <div class="container">
-        <h2>The power of natural ingredients</h2>
+        <h2>Siła naturalnych składników</h2>
         <div class="ingredients-grid">
           {{ingredients}}
         </div>
@@ -138,7 +139,7 @@
     <!-- PRODUCTS -->
     <section id="products" class="section">
       <div class="container">
-        <h2>Products</h2>
+        <h2>Produkty</h2>
         <div class="cards cards--3 products">
           {{products}}
         </div>
@@ -149,11 +150,11 @@
     <section id="contact" class="section section--alt">
       <div class="container cols-2">
         <div>
-          <h2>Contact</h2>
-          <p>Join us in promoting natural skincare solutions and expand your offer with our soap sets and scrubs.</p>
+          <h2>Kontakt</h2>
+          <p>Dołącz do nas w promocji naturalnych rozwiązań do pielęgnacji skóry i rozszerz swoją ofertę o nasze zestawy mydeł i peelingi.</p>
           <ul class="contact">
             <li><strong>Email:</strong> <a href="mailto:{{contact_email}}">{{contact_email}}</a></li>
-            <li><strong>Website:</strong> <a href="{{contact_www}}" target="_blank" rel="noopener">{{contact_www}}</a></li>
+            <li><strong>WWW:</strong> <a href="{{contact_www}}" target="_blank" rel="noopener">{{contact_www}}</a></li>
           </ul>
         </div>
         <div>
@@ -166,7 +167,7 @@
               <span>Message</span>
               <textarea name="message" rows="4" placeholder="Hello! I'd like to know more about poola & bloom."></textarea>
             </label>
-            <button class="btn btn--primary" type="submit">Send</button>
+            <button class="btn btn--primary" type="submit">Wyślij</button>
             <p class="form__note">Submitting sends your message to our inbox.</p>
           </form>
         </div>
