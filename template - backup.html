@@ -13,15 +13,7 @@
   <header class="nav">
     <div class="container nav__inner">
       <a href="#top" class="brand">poola & bloom</a>
-
-      <!-- hamburger -->
-      <button class="menu-toggle" aria-expanded="false" aria-controls="primary-menu" aria-label="Open menu">
-        <span class="menu-toggle__bar"></span>
-        <span class="menu-toggle__bar"></span>
-        <span class="menu-toggle__bar"></span>
-      </button>
-
-      <nav class="menu" id="primary-menu">
+      <nav class="menu">
         <a href="#about">About</a>
         <a href="#why">Why us</a>
         <a href="#reviews">Reviews</a>
@@ -62,16 +54,7 @@
           </div>
         </div>
         <div class="hero__image">
-          
-		    <img
-			src="{{hero_image_url}}"
-			alt="poola & bloom soaps"
-			decoding="async"
-			fetchpriority="high"
-			width="1200" height="1600"
-			sizes="(max-width: 900px) 90vw, 380px"
-			>
-		  
+          <img src="{{hero_image_url}}" alt="poola & bloom soaps" decoding="async" fetchpriority="high">
         </div>
       </div>
     </section>
@@ -196,18 +179,5 @@
       <p>© {{year}} poola & bloom - handcrafted natural soaps</p>
     </div>
   </footer>
-
-<script>
-  const btn = document.querySelector('.menu-toggle');
-  const nav = document.querySelector('.menu');
-  btn.addEventListener('click', () => {
-    const open = btn.getAttribute('aria-expanded') === 'true';
-    btn.setAttribute('aria-expanded', String(!open));
-    nav.classList.toggle('menu--open');
-    document.body.classList.toggle('no-scroll', !open);
-  });
-</script>
-
-
 </body>
 </html>
